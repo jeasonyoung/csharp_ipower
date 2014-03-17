@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iPower</RootNamespace>
+    <AssemblyName>iPower</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>亚软iPowerCert.pfx</AssemblyOriginatorKeyFile>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\iPower.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\CacheChangedEventArgs.cs" />
+    <Compile Include="Cache\CacheItem.cs" />
+    <Compile Include="Cache\CacheItemChangedEventArgs.cs" />
+    <Compile Include="Cache\CacheKeyType.cs" />
+    <Compile Include="Cache\DataLoadType.cs" />
+    <Compile Include="Cache\FileCache.cs" />
+    <Compile Include="Cache\FileCacheItem.cs" />
+    <Compile Include="Cache\ICacheItem.cs" />
+    <Compile Include="Cache\MemoryCacheItem.cs" />
+    <Compile Include="Configuration\INIConfiguration.cs" />
+    <Compile Include="Cache\CacheChangedType.cs" />
+    <Compile Include="Handlers\WebServiceHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Handlers\WebServiceHandlerFactory.cs" />
+    <Compile Include="Logs\FileAppender.cs" />
+    <Compile Include="Logs\IOLock.cs" />
+    <Compile Include="Logs\Logger.cs" />
+    <Compile Include="Paging\CallbackData.cs" />
+    <Compile Include="Paging\CallbackDataGrid.cs" />
+    <Compile Include="Paging\ICallbackData.cs" />
+    <Compile Include="Paging\IReqPaging.cs" />
+    <Compile Include="Paging\ReqPaging.cs" />
+    <Compile Include="Properties\AssemblyInfo_v.cs" />
+    <Compile Include="BaseException.cs" />
+    <Compile Include="CallResult.cs" />
+    <Compile Include="Configuration\ConnectionStringConfiguration.cs" />
+    <Compile Include="Configuration\iPowerAbstractConfiguration.cs" />
+    <Compile Include="Configuration\iPowerConfiguration.cs" />
+    <Compile Include="Configuration\iPowerConfigurationKeys.cs" />
+    <Compile Include="Configuration\iPowerSection.cs" />
+    <Compile Include="Cryptography\CryptographyException.cs" />
+    <Compile Include="Cryptography\EncryptorXmlData.cs" />
+    <Compile Include="Cryptography\HashCrypto.cs" />
+    <Compile Include="Cryptography\XXTEA.cs" />
+    <Compile Include="Data\DataCollection.cs" />
+    <Compile Include="FileStorage\FileStorageFactoryInstance.cs" />
+    <Compile Include="FileStorage\IFileStorageFactory.cs" />
+    <Compile Include="FileStorage\IStorageConfig.cs" />
+    <Compile Include="FileStorage\StorageModuleConfiguration.cs" />
+    <Compile Include="GUIDEx.cs" />
+    <Compile Include="IServiceContainer.cs" />
+    <Compile Include="ISystem.cs" />
+    <Compile Include="IUser.cs" />
+    <Compile Include="Logs\EnumLogFileRule.cs" />
+    <Compile Include="Logs\EnumLogsType.cs" />
+    <Compile Include="Logs\ILogFileHead.cs" />
+    <Compile Include="Logs\ILogStorage.cs" />
+    <Compile Include="Logs\LogContainer.cs" />
+    <Compile Include="Logs\LogsConfig.cs" />
+    <Compile Include="Logs\LogStorage.cs" />
+    <Compile Include="Platform\IButton.cs" />
+    <Compile Include="Platform\IDataDropDownList.cs" />
+    <Compile Include="Platform\ITreeView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialize\ISerializeView.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="Upload\HttpUploadFile.cs" />
+    <Compile Include="Upload\ProgressEventArgs.cs" />
+    <Compile Include="Upload\CallbackEventArgs.cs" />
+    <Compile Include="Utility\BeanUtils.cs" />
+    <Compile Include="Utility\BufferBlockUtil.cs" />
+    <Compile Include="Utility\CollectionBase.cs" />
+    <Compile Include="Utility\ConvertEx.cs" />
+    <Compile Include="Utility\DataUtil.cs" />
+    <Compile Include="Utility\EnumeratorOnArray.cs" />
+    <Compile Include="Utility\EnumeratorOnICollection.cs" />
+    <Compile Include="Utility\EnumeratorOnIEnumerator.cs" />
+    <Compile Include="Utility\EnumeratorOnIList.cs" />
+    <Compile Include="Utility\Guard.cs" />
+    <Compile Include="Utility\HashCodeCombiner.cs" />
+    <Compile Include="Utility\HexParser.cs" />
+    <Compile Include="Utility\IdentityImpersonation.cs" />
+    <Compile Include="Utility\ImageHelper.cs" />
+    <Compile Include="Utility\Pair.cs" />
+    <Compile Include="Utility\RandomHelper.cs" />
+    <Compile Include="Utility\SortHelper.cs" />
+    <Compile Include="Utility\StringUtil.cs" />
+    <Compile Include="Utility\TypeHelper.cs" />
+    <Compile Include="Utility\XmlTools.cs" />
+    <Compile Include="WinService\Jobs\IJob.cs" />
+    <Compile Include="WinService\JobStatus.cs" />
+    <Compile Include="WSClient\DynamicProxyClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="亚软iPowerCert.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

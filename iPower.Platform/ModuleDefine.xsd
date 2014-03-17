@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ModuleDefine"
+    targetNamespace="http://yaesoft.com/ModuleDefine.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://yaesoft.com/ModuleDefine.xsd"
+    xmlns:mstns="http://yaesoft.com/ModuleDefine.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+ 
+ 
+  <!--根元素-->
+  <xs:element name ="Jeason" type="RootNode"/>
+  
+  <!--根节点类型定义-->
+  <xs:complexType name ="RootNode">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <!--系统节点-->
+      <xs:element name="System" type="SystemNode">
+        <!--唯一约束-->
+        <xs:unique name="UniqueModuleID">
+          <xs:selector xpath=".//Module"/>
+          <xs:field xpath="@ModuleID"/>
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+    <!--属性-->
+    <!--版本设置-->
+    <xs:attribute name="version" type="xs:double"/>
+  </xs:complexType>
+  
+  <!--系统节点类型-->
+  <xs:complexType name ="SystemNode">
+    <xs:sequence>
+      <!--模块节点-->
+      <xs:element name="Module" type="ModuleNode" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <!--属性-->
+    <!--系统ID-->
+    <xs:attribute name ="SystemID" type="xs:string"/>
+    <!--系统标识-->
+    <xs:attribute name ="SystemSign" type="xs:string"/>
+    <!--系统名称-->
+    <xs:attribute name ="SystemName" type="xs:string"/>
+    <!--系统描述-->
+    <xs:attribute name ="SystemDescription" type="xs:string"/>
+  </xs:complexType>
+ 
+  <!--模块节点类型-->
+  <xs:complexType name ="ModuleNode">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="Module" type="ModuleNode"/>
+    </xs:sequence>
+    <!--属性-->
+    <!--模块ID-->
+    <xs:attribute name ="ModuleID" type="xs:string"/>
+    <!--模块名称-->
+    <xs:attribute name ="ModuleName" type="xs:string"/>
+    <!--模块URI-->
+    <xs:attribute name ="ModuleUri" type="xs:string"/>
+    <!--排序-->
+    <xs:attribute name ="OrderNo" type="xs:int"/>
+  </xs:complexType>
+  
+</xs:schema>

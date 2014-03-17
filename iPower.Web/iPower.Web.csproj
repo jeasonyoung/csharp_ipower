@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E1C506F-A613-459C-BAA2-F8A412680C1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iPower.Web</RootNamespace>
+    <AssemblyName>iPower.Web</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Nonshipping>true</Nonshipping>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>亚软iPowerCert.pfx</AssemblyOriginatorKeyFile>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\iPower.Web.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\iPower\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo_v.cs" />
+    <Compile Include="OutlookView\OutlookView.cs" />
+    <Compile Include="TreeView\TreeView.cs" />
+    <Compile Include="TreeView\TreeViewNode.cs" />
+    <Compile Include="UI\ButtonEx.cs" />
+    <Compile Include="UI\BaseDataBoundControlEx.cs" />
+    <Compile Include="UI\BoundFieldEx.cs" />
+    <Compile Include="UI\CheckBoxFieldEx.cs" />
+    <Compile Include="UI\CheckBoxListEx.cs" />
+    <Compile Include="UI\ChildTable.cs" />
+    <Compile Include="UI\CompositeDataBoundControlEx.cs" />
+    <Compile Include="UI\ControlExportData.cs" />
+    <Compile Include="UI\DataBoundControlEx.cs" />
+    <Compile Include="UI\DataBoundControlExHelper.cs" />
+    <Compile Include="UI\DataControlFieldCellEx.cs" />
+    <Compile Include="UI\DataControlFieldEx.cs" />
+    <Compile Include="UI\DataControlFieldExCollection.cs" />
+    <Compile Include="UI\DataControlFieldHeaderCellEx.cs" />
+    <Compile Include="UI\DataControlImageButton.cs" />
+    <Compile Include="UI\DataControlLinkButton.cs" />
+    <Compile Include="UI\DataControlPagerLinkButton.cs" />
+    <Compile Include="UI\DataGridView.cs" />
+    <Compile Include="UI\DataGridViewCommandEventArgs.cs" />
+    <Compile Include="UI\DataGridViewExport.cs" />
+    <Compile Include="UI\DataGridViewPaging.cs" />
+    <Compile Include="UI\DataGridViewRow.cs" />
+    <Compile Include="UI\DataGridViewRowCollection.cs" />
+    <Compile Include="UI\DataGridViewRowEventArgs.cs" />
+    <Compile Include="UI\DataGridViewRowSelectingEvent.cs" />
+    <Compile Include="UI\DataGridViewSorting.cs" />
+    <Compile Include="UI\DataGridViewStyles.cs" />
+    <Compile Include="UI\DataSourceHelper.cs" />
+    <Compile Include="UI\DataSourceSelectArgumentsEx.cs" />
+    <Compile Include="UI\DataSourceViewEx.cs" />
+    <Compile Include="UI\ExportData.cs" />
+    <Compile Include="UI\IDataSourceEx.cs" />
+    <Compile Include="UI\LabelEx.cs" />
+    <Compile Include="UI\MultiQueryStringFieldEx.cs" />
+    <Compile Include="UI\OrderedDictionaryStateHelper.cs" />
+    <Compile Include="UI\PagedDataSourceEx.cs" />
+    <Compile Include="UI\PagerSettingsEx.cs" />
+    <Compile Include="UI\ReadOnlyDataSourceEx.cs" />
+    <Compile Include="UI\ReadOnlyDataSourceViewEx.cs" />
+    <Compile Include="UI\SupportsEventValidationExAttribute.cs" />
+    <Compile Include="UI\TabMultiView.cs" />
+    <Compile Include="UI\TabView.cs" />
+    <Compile Include="UI\TemplateFieldEx.cs" />
+    <Compile Include="UI\Designer\ButtonExConverter.cs" />
+    <Compile Include="UI\Designer\ButtonExDesigner.cs" />
+    <Compile Include="UI\DropDownListEx.cs" />
+    <Compile Include="UI\Enum.cs" />
+    <Compile Include="UI\FormEx.cs" />
+    <Compile Include="UI\PickerBase.cs" />
+    <Compile Include="UI\RadioButtonListEx.cs" />
+    <Compile Include="UI\ServerAlert.cs" />
+    <Compile Include="UI\TextBoxCalendar.cs" />
+    <Compile Include="UI\TextBoxEx.cs" />
+    <Compile Include="UI\ValidationSummaryEx.cs" />
+    <Compile Include="Upload\UploadView.cs" />
+    <Compile Include="Upload\UploadViewDataItem.cs" />
+    <Compile Include="Utility\ListBoxHelper.cs" />
+    <Compile Include="Utility\Util.cs" />
+    <Compile Include="WebDAV\DefaultWebDAVDocumentHandler.cs" />
+    <Compile Include="WebDAV\Document.cs" />
+    <Compile Include="WebDAV\GetHandler.cs" />
+    <Compile Include="WebDAV\IVerbHandler.cs" />
+    <Compile Include="WebDAV\IWebDAVDocumentHandler.cs" />
+    <Compile Include="WebDAV\LockHandler.cs" />
+    <Compile Include="WebDAV\ModuleConfiguration.cs" />
+    <Compile Include="WebDAV\OptionsHandler.cs" />
+    <Compile Include="WebDAV\PutHandler.cs" />
+    <Compile Include="WebDAV\WebDAVDocumentHandlerFacotry.cs" />
+    <Compile Include="WebDAV\WebDAVHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="亚软iPowerCert.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TreeView\closedfolder.gif" />
+    <EmbeddedResource Include="TreeView\F.gif" />
+    <EmbeddedResource Include="TreeView\I.gif" />
+    <EmbeddedResource Include="TreeView\L.gif" />
+    <EmbeddedResource Include="TreeView\Lminus.gif" />
+    <EmbeddedResource Include="TreeView\Lplus.gif" />
+    <EmbeddedResource Include="TreeView\openfolder.gif" />
+    <EmbeddedResource Include="TreeView\T.gif" />
+    <EmbeddedResource Include="TreeView\Tminus.gif" />
+    <EmbeddedResource Include="TreeView\Tplus.gif" />
+    <EmbeddedResource Include="TreeView\TreeView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\ButtonEx.bmp" />
+    <EmbeddedResource Include="UI\CheckBoxFieldEx.bmp" />
+    <EmbeddedResource Include="UI\DataGridView.bmp" />
+    <EmbeddedResource Include="UI\DropDownListEx.bmp" />
+    <EmbeddedResource Include="UI\PickerBase.bmp" />
+    <EmbeddedResource Include="UI\PickerBase_Clear.gif" />
+    <EmbeddedResource Include="UI\PickerBase_Picker.gif" />
+    <EmbeddedResource Include="UI\RadioButtonListEx.bmp" />
+    <EmbeddedResource Include="UI\ServerAlert.bmp" />
+    <EmbeddedResource Include="UI\TextBoxEx.bmp" />
+    <EmbeddedResource Include="UI\ValidationSummaryEx.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UI\TextBoxCalendar.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iPower\iPower.csproj">
+      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
+      <Name>iPower</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="OutlookView\OutlookExpand.png" />
+    <EmbeddedResource Include="OutlookView\OutlookNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Upload\UploadView.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
