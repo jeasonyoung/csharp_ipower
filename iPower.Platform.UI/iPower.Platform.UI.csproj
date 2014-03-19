@@ -95,10 +95,6 @@
       <Project>{349E7E3F-0050-4728-A5D5-8A7ADD0F9FAF}</Project>
       <Name>iPower.Platform</Name>
     </ProjectReference>
-    <ProjectReference Include="..\iPower.Web\iPower.Web.csproj">
-      <Project>{6E1C506F-A613-459C-BAA2-F8A412680C1E}</Project>
-      <Name>iPower.Web</Name>
-    </ProjectReference>
     <ProjectReference Include="..\iPower\iPower.csproj">
       <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
       <Name>iPower</Name>
