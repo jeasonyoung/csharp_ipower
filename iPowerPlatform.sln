@@ -27,27 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPower.Platform.UI", "iPowe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPower.FileStorage", "iPower.FileStorage\iPower.FileStorage.csproj", "{360996BC-89FB-4906-8AE3-77380EA9BE08}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "自动编译工具", "自动编译工具", "{15200F01-5CD2-48D7-943A-57CEFCAFA186}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "代码生成", "代码生成", "{9BC3C95A-B85F-43CC-AB65-ABC36E3F2F07}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPower.AutoBuildCode.Engine", "iPower.AutoBuildCode.Engine\iPower.AutoBuildCode.Engine.csproj", "{F59A424D-84EC-4AB6-A5D9-AED02A339090}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPower.AutoBuildCode.WpfApp", "iPower.AutoBuildCode.WpfApp\iPower.AutoBuildCode.WpfApp.csproj", "{A39C2E95-563A-401D-87CF-31E4E159C66B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "测试", "测试", "{2A22E7F9-E97D-43A7-8A6D-7FF2AD506191}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemStorageRecordTest", "FileSystemStorageRecordTest\FileSystemStorageRecordTest.csproj", "{52E06FFE-652B-4461-B126-88EFF9D5FDC0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPower.WinService.Shell", "iPower.WinService.Shell\iPower.WinService.Shell.csproj", "{BAA5456F-1086-4694-AC6A-E54198CC7765}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPower.WinService.Test", "iPower.WinService.Test\iPower.WinService.Test.csproj", "{3740C7D7-3128-4C49-B5B6-49BA04254820}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -97,18 +81,6 @@ Global
 		{360996BC-89FB-4906-8AE3-77380EA9BE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{360996BC-89FB-4906-8AE3-77380EA9BE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{360996BC-89FB-4906-8AE3-77380EA9BE08}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F59A424D-84EC-4AB6-A5D9-AED02A339090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F59A424D-84EC-4AB6-A5D9-AED02A339090}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F59A424D-84EC-4AB6-A5D9-AED02A339090}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F59A424D-84EC-4AB6-A5D9-AED02A339090}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A39C2E95-563A-401D-87CF-31E4E159C66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A39C2E95-563A-401D-87CF-31E4E159C66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A39C2E95-563A-401D-87CF-31E4E159C66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A39C2E95-563A-401D-87CF-31E4E159C66B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{52E06FFE-652B-4461-B126-88EFF9D5FDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{52E06FFE-652B-4461-B126-88EFF9D5FDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{52E06FFE-652B-4461-B126-88EFF9D5FDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{52E06FFE-652B-4461-B126-88EFF9D5FDC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BAA5456F-1086-4694-AC6A-E54198CC7765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BAA5456F-1086-4694-AC6A-E54198CC7765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAA5456F-1086-4694-AC6A-E54198CC7765}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -135,8 +107,5 @@ Global
 		{40C744D9-1D18-43BE-9A9A-511BA2EAAFD6} = {DFB1386C-D805-462E-8162-412F277AC567}
 		{BF08EF30-A60B-40E1-8FAE-243E964ECBB6} = {DFB1386C-D805-462E-8162-412F277AC567}
 		{F3918067-F289-4990-BFF6-A9D7064601BA} = {DFB1386C-D805-462E-8162-412F277AC567}
-		{F59A424D-84EC-4AB6-A5D9-AED02A339090} = {9BC3C95A-B85F-43CC-AB65-ABC36E3F2F07}
-		{A39C2E95-563A-401D-87CF-31E4E159C66B} = {9BC3C95A-B85F-43CC-AB65-ABC36E3F2F07}
-		{52E06FFE-652B-4461-B126-88EFF9D5FDC0} = {2A22E7F9-E97D-43A7-8A6D-7FF2AD506191}
 	EndGlobalSection
 EndGlobal
