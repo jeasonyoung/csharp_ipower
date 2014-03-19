@@ -37,6 +37,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\iPower.Web.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -158,17 +159,17 @@
     <EmbeddedResource Include="UI\TextBoxCalendar.js" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iPower\iPower.csproj">
-      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
-      <Name>iPower</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="OutlookView\OutlookExpand.png" />
     <EmbeddedResource Include="OutlookView\OutlookNormal.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Upload\UploadView.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iPower\iPower.csproj">
+      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
+      <Name>iPower</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

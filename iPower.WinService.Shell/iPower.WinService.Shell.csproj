@@ -38,6 +38,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\iPower.WinService.Shell.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -70,16 +71,6 @@
     <Compile Include="WinServiceInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\iPower.WinService\iPower.WinService.csproj">
-      <Project>{5C700A69-C208-4B0A-A78E-BA681015EDB7}</Project>
-      <Name>iPower.WinService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\iPower\iPower.csproj">
-      <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
-      <Name>iPower</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

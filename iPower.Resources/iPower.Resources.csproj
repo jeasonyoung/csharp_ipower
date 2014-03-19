@@ -36,6 +36,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\iPower.Resources.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,10 +63,6 @@
     <None Include="亚软iPowerCert.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\iPower.Data\iPower.Data.csproj">
-      <Project>{49E097D0-FCDA-4CB2-A27D-CA4EDCD5403B}</Project>
-      <Name>iPower.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\iPower\iPower.csproj">
       <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
       <Name>iPower</Name>

@@ -36,6 +36,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\iPower.Platform.Engine.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -73,6 +74,10 @@
     <ProjectReference Include="..\iPower.Platform\iPower.Platform.csproj">
       <Project>{349E7E3F-0050-4728-A5D5-8A7ADD0F9FAF}</Project>
       <Name>iPower.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\iPower.Resources\iPower.Resources.csproj">
+      <Project>{5BAE93E8-A48C-48F6-8726-C65379B22658}</Project>
+      <Name>iPower.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\iPower\iPower.csproj">
       <Project>{ACF5A361-DFCF-4346-921C-060DB79E7F19}</Project>
