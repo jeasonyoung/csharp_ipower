@@ -454,11 +454,18 @@ namespace iPower.Web.UI
         /// <returns>已转换为所指定格式的字段值。</returns>
         protected virtual string FormatDataValue(string dataFormat, object[] dataValue, bool encode)
         {
-            if (dataValue == null || dataValue.Length == 0) return string.Empty;
-            if (string.IsNullOrEmpty(dataFormat)) dataFormat = "{0}";
-            string value = string.Format(CultureInfo.CurrentCulture, dataFormat, dataValue);
-            if (encode) return HttpUtility.HtmlEncode(value);
-            return value;
+            try
+            {
+                if (dataValue == null || dataValue.Length == 0) return string.Empty;
+                if (string.IsNullOrEmpty(dataFormat)) dataFormat = "{0}";
+                string value = string.Format(CultureInfo.CurrentCulture, dataFormat, dataValue);
+                if (encode) return HttpUtility.HtmlEncode(value);
+                return value;
+            }
+            catch (Exception e)
+            {
+                return e.Message + "[" + dataFormat + "]";
+            }
         }
         /// <summary>
         /// 格式化指定字段值。
@@ -505,15 +512,14 @@ namespace iPower.Web.UI
             for (int i = 0; i < fields.Length; i++)
             {
                 if (fields[i] == null || string.IsNullOrEmpty(fields[i]))
+                {
+                    list.Add(null);
                     continue;
+                }
                 pd = properties.Find(fields[i], true);
                 if (pd == null)
                     throw new HttpException("Field_Not_Found :" + fields[i]);
-                object dataValue = pd.GetValue(component);
-                if (dataValue != null && !Convert.IsDBNull(dataValue))
-                {
-                    list.Add(dataValue);
-                }
+                list.Add(pd.GetValue(component));
             }
             return list.ToArray();
         }
