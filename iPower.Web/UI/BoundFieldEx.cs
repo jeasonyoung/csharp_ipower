@@ -454,6 +454,7 @@ namespace iPower.Web.UI
         /// <returns>已转换为所指定格式的字段值。</returns>
         protected virtual string FormatDataValue(string dataFormat, object[] dataValue, bool encode)
         {
+            if (dataValue == null || dataValue.Length == 0) return string.Empty;
             if (string.IsNullOrEmpty(dataFormat)) dataFormat = "{0}";
             string value = string.Format(CultureInfo.CurrentCulture, dataFormat, dataValue);
             if (encode) return HttpUtility.HtmlEncode(value);
