@@ -49,12 +49,6 @@ namespace iPower.Web.UI
         {
             this.r = new Regex("\r\n|\r", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         }
-        /// <summary>
-        /// Îö¹¹º¯Êý¡£
-        /// </summary>
-        ~ServerAlert()
-        {
-        }
         #endregion
 
         #region ÊôÐÔ
@@ -148,23 +142,24 @@ namespace iPower.Web.UI
             {
                 StringBuilder sb = new StringBuilder();
                 sb.Append("<script language=\"javascript\">\r\n");
-                sb.AppendFormat("function {0}()\r\n", scriptKey);
-                sb.Append("{\r\n");
+                sb.Append("<!--").Append("\r\n");
+                sb.Append("$(window).load(function(){").Append("\r\n");
                 if (!string.IsNullOrEmpty(this.BeforeAlertFunction))
+                {
                     sb.AppendFormat("\t{0}\r\n", this.BeforeAlertFunction);
-                sb.AppendFormat("\tvar obj=document.getElementById(\"{0}\");\r\n", this.ClientID);
-                //sb.AppendFormat("\tif(window.document.all.{0}.value=='true')\r\n", this.ClientID);
-                sb.Append("\tif(obj && obj.value == 'true')");
+                }
+                sb.AppendFormat("\tvar obj = $(\"#{0}\");\r\n", this.ClientID);
+                //sb.Append("alert(obj);console.info(obj);alert(obj.attr('value'));console.info(obj.html())").Append("\r\n");
+                sb.Append("\tif(obj && obj.attr('value') == 'true')").Append("\r\n");
                 sb.Append("\t{\r\n");
-                //sb.AppendFormat("\t\talert(\"{0}\");\r\n", this.Message);
-                sb.Append("\t\talert(obj.innerHTML);\r\n");
-                //sb.Append("\t\tobj.value = 'false';\r\n");
-                //sb.AppendFormat("\t\twindow.document.all.{0}.value='false';\r\n", this.ClientID);
+                sb.Append("\t\talert(obj.html());\r\n");
                 sb.Append("\t}\r\n");
                 if (!string.IsNullOrEmpty(this.AfterAlertFunction))
-                    sb.AppendFormat("\t {0}\r\n", this.AfterAlertFunction);
-                sb.Append("}\r\n");
-                sb.AppendFormat("window.attachEvent('onload',{0});\r\n", scriptKey);
+                {
+                    sb.AppendFormat("\t{0}\r\n", this.AfterAlertFunction);
+                }
+                sb.Append("\r\n").Append("});").Append("\r\n");
+                sb.Append("//-->").Append("\r\n");
                 sb.Append("</script>\r\n");
 
                 this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), scriptKey, sb.ToString());
