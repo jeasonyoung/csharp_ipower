@@ -67,7 +67,7 @@ $(function () {
                 for (var i = 0; i < cb.length; i++) {
                     var id = $(cb[i]).attr("id");
                     if (($(cb[i]).attr("type") == "checkbox") && (id.indexOf(clientID + "_CHK_") > -1)) {
-                        if ($(cb[i]).attr("checked") == "true" /*cb[i].checked*/) {
+                        if ($(cb[i]).attr("checked")) {
                             result = true;
                             break;
                         }
